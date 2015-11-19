@@ -192,6 +192,90 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-blog-site-update-v1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/19/blog-site-update-v1/" class="article-date">
+  	<time datetime="2015-11-19T03:16:53.000Z" itemprop="datePublished">2015-11-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/19/blog-site-update-v1/">网站安家成功，开始装修了</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="2015-11-19_添加评论功能">2015-11-19 添加评论功能</h3><blockquote>
+<p>Github + Hexo 是静态网站，不能添加评论功能， 通过插件集成 <a href="http://duoshuo.com" title="多说" target="_blank" rel="external">多说 http://duoshuo.com</a> 留言系统。</p>
+</blockquote>
+<h3 id="2015-11-19_使用7牛图片存储">2015-11-19 使用7牛图片存储</h3><ul>
+<li><p>Github 空间有1G大小限制，另外Github服务器在国外, 考虑速度，将图片进行分流。</p>
+</li>
+<li><p>目前尝试使用 <a href="www.qiniu.com" title="7牛">7牛 www.qiniu.com</a> 的图片存储。7牛免费资源 (10GB永久免费存储空间/每月10GB下载流量/每月10万次Put请求/每月100万次Get请求) 目前应该是够用了。</p>
+</li>
+<li><p>关于图片的发布，7牛的同步工具 qrsbox 也挺好用的，可以自动监控同步文件图片，上传到服务器。7牛服务器没有目录，同步后链接前缀+图片文件名就可以直接访问了。</p>
+</li>
+<li><p>关于图片的使用，赞一个的是7牛提供的图片外链支持参数，可以调整图片大小，弥补了Markdown不能定义图片大小的问题。</p>
+</li>
+</ul>
+<p><strong>    七牛图片基本处理（imageView2）</strong><br>    <a href="http://developer.qiniu.com/docs/v6/api/reference/fop/image/imageview2.html" target="_blank" rel="external">http://developer.qiniu.com/docs/v6/api/reference/fop/image/imageview2.html</a></p>
+<ol>
+<li><p>裁剪正中部分，等比缩小生成200x200缩略图：</p>
+<p> <a href="http://developer.qiniu.com/resource/gogopher.jpg?imageView2/1/w/200/h/200" target="_blank" rel="external">http://developer.qiniu.com/resource/gogopher.jpg?imageView2/1/w/200/h/200</a></p>
+<p> <img src="http://developer.qiniu.com/resource/gogopher.jpg?imageView2/1/w/200/h/200" alt=""></p>
+</li>
+</ol>
+<ol>
+<li><p>宽度固定为200px，高度等比缩小，生成200x133缩略图：</p>
+<p> <a href="http://developer.qiniu.com/resource/gogopher.jpg?imageView2/2/w/200" target="_blank" rel="external">http://developer.qiniu.com/resource/gogopher.jpg?imageView2/2/w/200</a></p>
+<p> <img src="http://developer.qiniu.com/resource/gogopher.jpg?imageView2/2/w/200" alt=""></p>
+</li>
+<li><p>高度固定为200px，宽度等比缩小，生成300x200缩略图：</p>
+<p> <a href="http://developer.qiniu.com/resource/gogopher.jpg?imageView2/2/h/200" target="_blank" rel="external">http://developer.qiniu.com/resource/gogopher.jpg?imageView2/2/h/200</a></p>
+<p> <img src="http://developer.qiniu.com/resource/gogopher.jpg?imageView2/2/h/200" alt=""></p>
+</li>
+<li><p>渐进显示图片：</p>
+<p> <a href="http://developer.qiniu.com/resource/gogopher.jpg?imageView2/1/w/200/h/200/interlace/1" target="_blank" rel="external">http://developer.qiniu.com/resource/gogopher.jpg?imageView2/1/w/200/h/200/interlace/1</a></p>
+<p> <img src="http://developer.qiniu.com/resource/gogopher.jpg?imageView2/1/w/200/h/200/interlace/1" alt=""></p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-my-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
